@@ -17,16 +17,22 @@ repositories {
 }
 
 dependencies {
+    api(platform("org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.1"))
     testImplementation(kotlin("test"))
 }
 
 tasks.test {
     useJUnitPlatform()
+
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
         this.jvmTarget = javaVersion.toString()
+        this.freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn")
     }
 }
 

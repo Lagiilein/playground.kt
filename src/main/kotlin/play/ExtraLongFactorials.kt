@@ -17,6 +17,9 @@ val factorials = sequence<BigInteger> {
     }
 }
 
+/**
+ * [https://www.hackerrank.com/challenges/extra-long-factorials/problem]
+ */
 fun extraLongFactorials(n: Int): BigInteger {
     // Write your code here
     return factorials.elementAt(n - 1)

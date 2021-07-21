@@ -1,5 +1,8 @@
 package play
 
+/**
+ * [https://www.hackerrank.com/challenges/day-of-the-programmer/problem]
+ */
 fun dayOfProgrammer(year: Int): String {
     val dayWithoutLeap = lazy {
         "13.09.$year"

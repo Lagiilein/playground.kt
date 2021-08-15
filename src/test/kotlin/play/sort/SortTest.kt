@@ -79,7 +79,7 @@ class SortTest {
 
     @OptIn(ExperimentalTime::class)
     @Test
-    fun `test sorting algorithms`() {
+    fun `test sorting algorithms times`() {
         val times = mutableMapOf<String, MutableList<Duration>>()
 
         fun testList(it: MutableList<Long>) {
@@ -101,8 +101,6 @@ class SortTest {
                         result: $list
                     """.trimIndent()
                 )
-
-                println("$name - $time - ${list.size}")
             }
         }
 

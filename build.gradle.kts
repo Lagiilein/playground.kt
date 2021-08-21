@@ -7,7 +7,7 @@
 plugins {
     base
     java
-    kotlin("jvm") version "1.5.21"
+    kotlin("jvm") version "1.5.30-RC"
 }
 
 val javaVersion = JavaVersion.VERSION_16
@@ -33,6 +33,12 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
         this.jvmTarget = javaVersion.toString()
         this.freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn")
+    }
+}
+
+kotlin {
+    jvmToolchain {
+        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(javaVersion.toString()))
     }
 }
 

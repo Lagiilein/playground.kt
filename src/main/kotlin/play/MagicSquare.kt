@@ -1,8 +1,5 @@
 package play
 
-import play.search.binarySearch
-import play.sort.quickInsertionSort
-
 object MagicSquare {
 
     /**
@@ -89,16 +86,15 @@ object MagicSquare {
 
     private fun checkNumbers(square: List<List<Int>>): Boolean {
         val n = square.size
-        val numbers = mutableListOf<Int>()
+        val numbers = hashSetOf<Int>()
         for (i in 0 until n) {
             val item = square[i / n][i % n]
 
             if (item <= 0) return false
             if (item > n * n) return false
-            if (numbers.binarySearch(item) != -1) return false
+            if (numbers.contains(item)) return false
 
             numbers += item
-            numbers.quickInsertionSort()
         }
         return true
     }

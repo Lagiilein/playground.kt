@@ -3,7 +3,7 @@ package play
 /**
  * [https://www.hackerrank.com/challenges/divisible-sum-pairs/problem]
  */
-fun divisibleSumPairs(n: Int, k: Int, ar: Array<Int>): Int {
+fun divisibleSumPairs(ignored: Int, k: Int, ar: Array<Int>): Int {
     var pairs = 0
 
     for (i in ar.indices) {

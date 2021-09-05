@@ -128,7 +128,6 @@ class SortTest {
             testList(newList)
         }
 
-
         for ((name, durations) in times) {
             val sum = Duration.nanoseconds(durations.sumOf { it.inWholeNanoseconds })
             val avg = Duration.nanoseconds(sum.inWholeNanoseconds / durations.size)

@@ -1,5 +1,7 @@
 package play
 
+import exception.NoSolutionException
+
 /**
  * [https://leetcode.com/problems/two-sum/]
  */
@@ -13,7 +15,7 @@ fun twoSum(nums: IntArray, target: Int): IntArray {
         }
     }
 
-    throw Exception("No solution. ")
+    throw NoSolutionException()
 }
 
 fun twoSumFast(nums: IntArray, target: Int): IntArray {
@@ -30,5 +32,5 @@ fun twoSumFast(nums: IntArray, target: Int): IntArray {
         }
     }
 
-    throw Exception("No solution. ")
+    throw NoSolutionException()
 }

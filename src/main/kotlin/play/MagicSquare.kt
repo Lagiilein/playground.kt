@@ -17,17 +17,7 @@ object MagicSquare {
         val n = square.size
 
         // check numbers
-        val numbers = mutableListOf<Int>()
-        for (i in 0 until n) {
-            val item = square[i / n][i % n]
-
-            if (item <= 0) return false
-            if (item > n * n) return false
-            if (numbers.binarySearch(item) != -1) return false
-
-            numbers += item
-            numbers.quickInsertionSort()
-        }
+        if (!checkNumbers(square)) return false
 
         // check row's sizes
         for (row in square) {
@@ -95,5 +85,21 @@ object MagicSquare {
         }
 
         return leftToRightDiagonalCheck() && rightToLeftDiagonalCheck()
+    }
+
+    private fun checkNumbers(square: List<List<Int>>): Boolean {
+        val n = square.size
+        val numbers = mutableListOf<Int>()
+        for (i in 0 until n) {
+            val item = square[i / n][i % n]
+
+            if (item <= 0) return false
+            if (item > n * n) return false
+            if (numbers.binarySearch(item) != -1) return false
+
+            numbers += item
+            numbers.quickInsertionSort()
+        }
+        return true
     }
 }

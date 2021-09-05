@@ -4,7 +4,6 @@ import java.math.BigInteger
 
 val factorials = sequence<BigInteger> {
 
-
     var i = 0L
     var privious = BigInteger.ONE
 

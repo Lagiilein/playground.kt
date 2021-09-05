@@ -7,7 +7,7 @@
 plugins {
     base
     java
-    kotlin("jvm") version "1.5.30-RC"
+    kotlin("jvm") version "1.5.30"
 }
 
 val javaVersion = JavaVersion.VERSION_16
@@ -17,7 +17,6 @@ repositories {
 }
 
 dependencies {
-    api(platform("org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.1"))
     testImplementation(kotlin("test"))
 }
 

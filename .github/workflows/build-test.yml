@@ -31,3 +31,5 @@ jobs:
 
       - name: run Gradle Test
         run: ./gradlew test
+        env:
+          AUTO_CORRECT_DISABLED: true

@@ -71,7 +71,7 @@ subprojects {
     }
 
     detekt {
-        autoCorrect = true
+        autoCorrect = System.getenv("AUTO_CORRECT_DISABLED") != "true"
         buildUponDefaultConfig = true
 
         config = files("${rootDir}/detekt.yml")

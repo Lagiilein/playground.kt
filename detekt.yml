@@ -48,11 +48,6 @@ performance:
   ArrayPrimitive:
     active: false
 
-formatting:
-  active: true
-  android: false
-  autoCorrect: true
-
 potential-bugs:
   UnsafeCast:
     active: true

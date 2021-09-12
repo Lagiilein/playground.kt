@@ -33,4 +33,5 @@ jobs:
       - name: Publish to Github Registry
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AUTO_CORRECT_DISABLED: true
         run: ./gradlew publish

@@ -88,24 +88,24 @@ subprojects {
 
     configure<PublishingExtension> {
         repositories {
-//            maven {
-//                name = "GitHubPackages"
-//                url = uri("https://maven.pkg.github.com/Lagiilein/playground.kt")
-//                credentials {
-//                    username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-//                    password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
-//                }
-//            }
-            // docker run -d -p 8081:8081 --name nexus sonatype/nexus3
             maven {
-                name = "local-nexus"
-                url = uri("http://localhost:8081/repository/maven-releases/")
-                isAllowInsecureProtocol = true
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/Lagiilein/playground.kt")
                 credentials {
-                    username = "admin"
-                    password = "poop"
+                    username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
+                    password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
                 }
             }
+            // docker run -d -p 8081:8081 --name nexus sonatype/nexus3
+//            maven {
+//                name = "local-nexus"
+//                url = uri("http://localhost:8081/repository/maven-releases/")
+//                isAllowInsecureProtocol = true
+//                credentials {
+//                    username = "admin"
+//                    password = "poop"
+//                }
+//            }
         }
         publications {
             register<MavenPublication>("idk") {

@@ -3,11 +3,11 @@ name: "Gradle Publish"
 on:
   push:
     branches: [ master ]
-    tags:
-      - v*
+    tags: [ "v*" ]
+    tags-ignore: [ "*", "!v*" ]
 
 jobs:
-  build:
+  publish:
     name: "Gradle Publish"
 
     permissions:

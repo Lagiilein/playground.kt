@@ -1,6 +1,6 @@
 package play
 
-import exception.NoSolutionException
+import play.exception.NoSolutionException
 
 /**
  * [https://leetcode.com/problems/two-sum/]

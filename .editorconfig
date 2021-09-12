@@ -1,0 +1,16 @@
+root = true
+
+[*]
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+max_line_length = 120
+
+# Windows-style newlines for Windows batch files
+[*.bat]
+end_of_line = crlf
+
+[*.{yml, yaml, json, html, xml, md}]
+indent_size = 2
+max_line_length = off

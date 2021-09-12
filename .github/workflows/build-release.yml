@@ -3,7 +3,6 @@ name: "Gradle Publish"
 on:
   push:
     branches: [ master ]
-    tags: [ "v*" ]
     tags-ignore: [ "*", "!v*" ]
 
 jobs:

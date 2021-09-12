@@ -13,12 +13,18 @@ plugins {
 }
 
 group = "play"
-version = "0.1.6"
+version = play.buildsrc.Version.getVersionFromGit()
 
 object Constants {
     const val GITHUB_REPO_OWNER = "Lagiilein"
     const val GITHUB_REPO_NAME = "playground.kt"
     const val REPOSITORY_URL = "https://github.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}"
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
 
 subprojects {
@@ -36,10 +42,6 @@ subprojects {
     }
 
     val javaVersion = JavaVersion.VERSION_11
-
-    repositories {
-        mavenCentral()
-    }
 
     dependencies {
         api(platform("org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.2"))

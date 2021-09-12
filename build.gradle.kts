@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "play"
-version = "0.1.4"
+version = "0.1.5"
 
 object Constants {
     const val GITHUB_REPO_OWNER = "Lagiilein"

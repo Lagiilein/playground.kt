@@ -9,6 +9,9 @@ jobs:
   publish:
     name: "Gradle Publish"
 
+    # Prevent job from running, when there's no version tag
+    if: ${{ startsWith(github.ref, 'refs/tags/v') }}
+
     permissions:
       contents: read
       packages: write

@@ -1,7 +1,7 @@
 package play
 
 /**
- * @see [https://www.hackerrank.com/challenges/electronics-shop/problem]
+ * [https://www.hackerrank.com/challenges/electronics-shop/problem]
  */
 fun getMoneySpent(keyboards: Array<Int>, drives: Array<Int>, b: Int): Int {
     val filter: (Int) -> Boolean = { it in 1 until b }

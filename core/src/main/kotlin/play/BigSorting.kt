@@ -1,7 +1,7 @@
 package play
 
 /**
- * @see [https://www.hackerrank.com/challenges/big-sorting/problem]
+ * [https://www.hackerrank.com/challenges/big-sorting/problem]
  */
 fun bigSorting(unsorted: Array<String>, radix: Int = 10): Array<String> {
     val comp = Comparator<String> { o1, o2 ->

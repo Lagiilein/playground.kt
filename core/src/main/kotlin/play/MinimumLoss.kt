@@ -4,7 +4,7 @@ import play.exception.NoSolutionException
 import java.util.TreeSet
 
 /**
- * @see [https://www.hackerrank.com/challenges/minimum-loss/problem]
+ * [https://www.hackerrank.com/challenges/minimum-loss/problem]
  */
 fun minimumLoss(price: Array<Long>): Long {
     require(price.size >= 2)

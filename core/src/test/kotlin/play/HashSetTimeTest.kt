@@ -9,7 +9,7 @@ import kotlin.time.Duration
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTimedValue
 
-class HashSetTimeTest {
+internal class HashSetTimeTest {
 
     @OptIn(ExperimentalTime::class)
     @Test

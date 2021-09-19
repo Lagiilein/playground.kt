@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import java.lang.management.ManagementFactory
 
-class PrintJavaVersionTest {
+internal class PrintJavaVersionTest {
 
     @Test
     @Disabled

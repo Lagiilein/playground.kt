@@ -4,7 +4,7 @@ import java.math.BigInteger
 
 private class TwoElementStack<T>(
     smallerElement: T,
-    largerElement: T
+    largerElement: T,
 ) {
 
     var smaller: T = smallerElement

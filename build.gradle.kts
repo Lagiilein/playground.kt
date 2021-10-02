@@ -49,6 +49,9 @@ subprojects {
         detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.18.1")
 
         testImplementation(kotlin("test"))
+        testApi(platform("io.kotest:kotest-bom:4.6.3"))
+        testImplementation("io.kotest:kotest-runner-junit5")
+        testImplementation("io.kotest:kotest-assertions-core")
     }
 
     tasks.test {

@@ -7,7 +7,7 @@ plugins {
     java
     `java-library`
     `maven-publish`
-    kotlin("jvm") version "1.5.30"
+    kotlin("jvm") version "1.5.31"
     id("io.gitlab.arturbosch.detekt") version "1.18.1"
     id("com.gorylenko.gradle-git-properties") version "2.3.1" apply false
 }

@@ -22,22 +22,25 @@ object Constants {
 }
 
 allprojects {
-    repositories {
-        mavenCentral()
-    }
-}
-
-subprojects {
 
     version = rootProject.version
     group = rootProject.group
 
+    repositories {
+        mavenCentral()
+    }
+
+    apply {
+        plugin("io.gitlab.arturbosch.detekt")
+    }
+}
+
+subprojects {
     apply {
         plugin("java")
         plugin("kotlin")
         plugin("java-library")
         plugin("maven-publish")
-        plugin("io.gitlab.arturbosch.detekt")
         plugin("com.gorylenko.gradle-git-properties")
     }
 

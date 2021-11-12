@@ -7,8 +7,8 @@ plugins {
     java
     `java-library`
     `maven-publish`
-    kotlin("jvm") version "1.5.31"
-    id("io.gitlab.arturbosch.detekt") version "1.18.1"
+    kotlin("jvm") version "1.6.0-RC2"
+    id("io.gitlab.arturbosch.detekt") version "1.19.0-RC1"
     id("com.gorylenko.gradle-git-properties") version "2.3.1" apply false
 }
 
@@ -44,12 +44,12 @@ subprojects {
         plugin("com.gorylenko.gradle-git-properties")
     }
 
-    val javaVersion = JavaVersion.VERSION_11
+    val javaVersion = JavaVersion.VERSION_17
 
     dependencies {
         api(platform("org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.2"))
 
-        detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.18.1")
+        detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.19.0-RC1")
 
         testImplementation(kotlin("test"))
         testApi(platform("io.kotest:kotest-bom:4.6.3"))

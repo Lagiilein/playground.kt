@@ -13,7 +13,8 @@ internal class MinimumAbsoluteDifferenceTest {
     fun minimumAbsoluteDifference() {
         assertEquals(3, minimumAbsoluteDifference(arrayOf(3, -7, 0)))
         assertEquals(2, minimumAbsoluteDifference(arrayOf(-2, 2, 4)))
-        assertEquals(1,
+        assertEquals(
+            1,
             minimumAbsoluteDifference(
                 "-59 -36 -13 1 -53 -92 -2 -96 -54 75"
                     .split(' ')

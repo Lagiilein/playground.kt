@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import kotlin.random.Random
 import kotlin.time.Duration
+import kotlin.time.Duration.Companion.nanoseconds
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
@@ -95,7 +96,8 @@ class SortTest {
                 times[name] = prevTimes
 
                 Assertions.assertArrayEquals(
-                    list.toTypedArray(), it.toMutableList().sorted().toTypedArray(), """
+                    list.toTypedArray(), it.toMutableList().sorted().toTypedArray(),
+                    """
                         method: $name
                         original: $it
                         result: $list
@@ -129,8 +131,8 @@ class SortTest {
         }
 
         for ((name, durations) in times) {
-            val sum = Duration.nanoseconds(durations.sumOf { it.inWholeNanoseconds })
-            val avg = Duration.nanoseconds(sum.inWholeNanoseconds / durations.size)
+            val sum = durations.sumOf { it.inWholeNanoseconds }.nanoseconds
+            val avg = (sum.inWholeNanoseconds / durations.size).nanoseconds
             println("$name - avg: $avg - sum: $sum - $durations")
         }
     }

@@ -12,8 +12,8 @@ plugins {
     id("com.gorylenko.gradle-git-properties") version "2.3.1" apply false
 }
 
-group = "play"
-version = play.buildsrc.Version.getVersionFromGit()
+group = "com.github.lagiilein.playground"
+version = com.github.lagiilein.playground.buildsrc.Version.getVersionFromGit()
 
 object Constants {
     const val GITHUB_REPO_OWNER = "Lagiilein"
